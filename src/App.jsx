@@ -16,12 +16,12 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app-container">
       <h1>Expense Tracker</h1>
       <ExpenseForm onAddExpense={addExpense}/>
       <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense}/>
       <ExpenseTotal expenses={expenses}/>
-    </>
+    </div>
   );
 }
 
