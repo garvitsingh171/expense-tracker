@@ -1,0 +1,23 @@
+.expense-total {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.expense-total h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.total-amount {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}

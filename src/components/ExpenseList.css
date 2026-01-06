@@ -1,0 +1,19 @@
+.expense-list {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.expense-list h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.no-expenses {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  padding: 30px 20px;
+}

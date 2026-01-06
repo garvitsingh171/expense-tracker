@@ -1,5 +1,6 @@
 import "./App.css";
 import ExpenseList from "./components/ExpenseList";
+import ExpenseTotal from "./components/ExpenseTotal";
 
 function App() {
   const sampleExpense = [
@@ -12,6 +13,7 @@ function App() {
     <>
       <h1>Expense Tracker</h1>
       <ExpenseList expenses={sampleExpense} />
+      <ExpenseTotal expenses={sampleExpense}/>
     </>
   );
 }
