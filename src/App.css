@@ -29,8 +29,19 @@ body {
 
 .app-container h1 {
   text-align: center;
-  color: #333;
+  color: #002fff;
   font-size: 32px;
   margin-bottom: 30px;
-  color: #002fff;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 20px 15px;
+    border-radius: 8px;
+  }
+
+  .app-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 }

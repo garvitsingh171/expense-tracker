@@ -2,7 +2,7 @@
   max-width: 700px;
   margin: 30px auto;
   padding: 20px;
-  background-color: #4CAF50;
+  background: linear-gradient(135deg, #00d5ff 0%, #00bfff 100%);
   color: white;
   border-radius: 8px;
   text-align: center;
@@ -13,11 +13,22 @@
   margin: 0 0 10px 0;
   font-size: 16px;
   font-weight: 500;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .total-amount {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .expense-total {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .total-amount {
+    font-size: 28px;
+  }
 }

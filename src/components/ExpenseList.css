@@ -6,14 +6,24 @@
 
 .expense-list h2 {
   font-size: 24px;
-  color: #333;
+  color: #2a2a2a;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .no-expenses {
   text-align: center;
-  color: #999;
+  color: #8b8b8b;
   font-size: 16px;
   padding: 30px 20px;
+}
+
+@media (max-width: 600px) {
+  .expense-list {
+    padding: 0;
+  }
+
+  .expense-list h2 {
+    font-size: 20px;
+  }
 }

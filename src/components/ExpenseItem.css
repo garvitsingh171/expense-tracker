@@ -26,7 +26,7 @@
 .expense-category {
   margin: 5px 0 0 0;
   font-size: 14px;
-  color: #888;
+  color: #555;
   background-color: #e3f2fd;
   display: inline-block;
   padding: 4px 12px;
@@ -34,10 +34,16 @@
   font-weight: 500;
 }
 
+.expense-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .expense-amount {
   font-size: 24px;
   font-weight: 700;
-  color: #2196f3;
+  color: #002fff;
   text-align: right;
   min-width: 120px;
 }
@@ -51,6 +57,7 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  margin-left: 10px;
   transition: background-color 0.3s;
 }
 
@@ -60,4 +67,26 @@
 
 .delete-button:active {
   background-color: #c62828;
+}
+
+@media (max-width: 600px) {
+  .expense-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 15px;
+  }
+
+  .expense-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .expense-amount {
+    min-width: 0;
+  }
+
+  .delete-button {
+    flex-shrink: 0;
+  }
 }
