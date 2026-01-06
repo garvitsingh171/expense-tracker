@@ -2,12 +2,12 @@ import ExpenseItem from "./ExpenseItem";
 
 function ExpenseList(props) {
   return (
-    <div>
+    <div className="expense-list">
       <h2>Your Expenses</h2>
       {props.expenses.length === 0 ? (
-        <p>No expenses yet. Add one to see here.</p>
+        <p className="no-expense">No expenses yet. Add one to see here.</p>
       ) : (
-        <div>
+        <div className="expense-container">
           {props.expenses.map((expense) => (
             <ExpenseItem
               key={expense.id}
