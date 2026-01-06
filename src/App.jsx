@@ -5,22 +5,22 @@ import ExpenseForm from "./components/ExpenseForm";
 import { useState } from "react";
 
 function App() {
-  const [expenses, setExpenses] = useState([])
+  const [expenses, setExpenses] = useState([]);
 
   const addExpense = (newExpense) => {
-    setExpenses([...expenses, newExpense])
-  }
+    setExpenses([...expenses, newExpense]);
+  };
 
   const deleteExpense = (id) => {
-    setExpenses(expenses.filter(exp => exp.id !== id))
-  }
+    setExpenses(expenses.filter((exp) => exp.id !== id));
+  };
 
   return (
     <div className="app-container">
       <h1>Expense Tracker</h1>
-      <ExpenseForm onAddExpense={addExpense}/>
-      <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense}/>
-      <ExpenseTotal expenses={expenses}/>
+      <ExpenseForm onAddExpense={addExpense} />
+      <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense} />
+      <ExpenseTotal expenses={expenses} />
     </div>
   );
 }
