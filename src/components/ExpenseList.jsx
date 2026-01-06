@@ -12,9 +12,11 @@ function ExpenseList(props) {
           {props.expenses.map((expense) => (
             <ExpenseItem
               key={expense.id}
+              id={expense.id}
               name={expense.name}
               category={expense.category}
               amount={expense.amount}
+              onDelete={props.onDeleteExpense}
             />
           ))}
         </div>

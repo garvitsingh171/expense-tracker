@@ -11,11 +11,15 @@ function App() {
     setExpenses([...expenses, newExpense])
   }
 
+  const deleteExpense = (id) => {
+    setExpenses(expenses.filter(exp => exp.id !== id))
+  }
+
   return (
     <>
       <h1>Expense Tracker</h1>
       <ExpenseForm onAddExpense={addExpense}/>
-      <ExpenseList expenses={expenses} />
+      <ExpenseList expenses={expenses} onDeleteExpense={deleteExpense}/>
       <ExpenseTotal expenses={expenses}/>
     </>
   );

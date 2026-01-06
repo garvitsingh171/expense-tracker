@@ -8,6 +8,9 @@ function ExpenseItem(props) {
         <div className="expense-category">{props.category}</div>
       </div>
       <div className="expense-amount">₹{props.amount}</div>
+      <button className='delete-button' onClick={() => props.onDelete(props.id)}>
+        Delete
+      </button>
     </div>
   );
 }

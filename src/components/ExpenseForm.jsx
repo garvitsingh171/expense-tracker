@@ -14,7 +14,7 @@ function ExpenseForm(props) {
             id: Date.now(),
             name: name,
             category: category,
-            amount: parseInt(amount)
+            amount: parseFloat(amount)
         }
 
         props.onAddExpense(newExpense)
