@@ -1,29 +1,93 @@
 .expense-list {
-  max-width: 700px;
+  max-width: 900px;
   margin: 30px auto;
   padding: 0 20px;
 }
 
 .expense-list h2 {
-  font-size: 24px;
-  color: #2a2a2a;
+  font-size: 26px;
+  color: #0d47a1;
   margin-bottom: 20px;
   text-align: center;
+  font-weight: 700;
 }
 
 .no-expenses {
   text-align: center;
-  color: #8b8b8b;
-  font-size: 16px;
-  padding: 30px 20px;
+  color: #546e7a;
+  padding: 60px 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-@media (max-width: 600px) {
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+.no-expenses p {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #37474f;
+}
+
+.empty-hint {
+  font-size: 14px;
+  color: #78909c;
+  font-weight: 400;
+}
+
+.expense-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
   .expense-list {
-    padding: 0;
+    padding: 0 15px;
+    margin: 20px auto;
+  }
+
+  .expense-list h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .no-expenses {
+    padding: 50px 20px;
+  }
+
+  .empty-icon {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expense-list {
+    padding: 0 10px;
   }
 
   .expense-list h2 {
     font-size: 20px;
+  }
+
+  .no-expenses {
+    padding: 40px 15px;
+  }
+
+  .empty-icon {
+    font-size: 48px;
+  }
+
+  .no-expenses p {
+    font-size: 16px;
+  }
+
+  .empty-hint {
+    font-size: 13px;
   }
 }

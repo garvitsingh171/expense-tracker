@@ -2,91 +2,152 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  background-color: #f9f9f9;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 15px 20px;
-  margin-bottom: 12px;
-  
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.expense-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
 }
 
 .expense-info {
   flex: 1;
+  min-width: 0;
 }
 
 .expense-name {
-  margin: 0;
+  margin: 0 0 8px 0;
   font-size: 18px;
   font-weight: 600;
-  color: #333;
+  color: #1a237e;
+  word-wrap: break-word;
 }
 
 .expense-category {
-  margin: 5px 0 0 0;
-  font-size: 14px;
-  color: #555;
-  background-color: #e3f2fd;
   display: inline-block;
-  padding: 4px 12px;
-  border-radius: 4px;
-  font-weight: 500;
+  font-size: 13px;
+  color: #1565c0;
+  background-color: #e3f2fd;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .expense-right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  flex-shrink: 0;
 }
 
 .expense-amount {
   font-size: 24px;
   font-weight: 700;
-  color: #002fff;
+  color: #1565c0;
   text-align: right;
-  min-width: 120px;
+  min-width: 100px;
 }
 
 .delete-button {
-  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
   background-color: #f44336;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  margin-left: 10px;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .delete-button:hover {
   background-color: #d32f2f;
+  transform: scale(1.05);
 }
 
 .delete-button:active {
-  background-color: #c62828;
+  transform: scale(0.98);
+}
+
+.delete-icon {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .expense-item {
+    padding: 16px 20px;
+  }
+
+  .expense-name {
+    font-size: 16px;
+  }
+
+  .expense-amount {
+    font-size: 20px;
+    min-width: 80px;
+  }
+
+  .delete-button {
+    padding: 8px 12px;
+    gap: 4px;
+  }
 }
 
 @media (max-width: 600px) {
   .expense-item {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 15px;
+    align-items: stretch;
+    gap: 15px;
+    padding: 16px;
   }
 
   .expense-right {
-    width: 100%;
+    flex-direction: row;
     justify-content: space-between;
-    margin-top: 10px;
+    gap: 12px;
   }
 
   .expense-amount {
+    text-align: left;
     min-width: 0;
+    flex: 1;
+  }
+
+  .delete-text {
+    display: none;
   }
 
   .delete-button {
-    flex-shrink: 0;
+    padding: 10px 14px;
+    gap: 0;
+  }
+
+  .delete-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expense-name {
+    font-size: 15px;
+  }
+
+  .expense-category {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .expense-amount {
+    font-size: 18px;
   }
 }

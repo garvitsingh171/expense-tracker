@@ -7,8 +7,13 @@ function ExpenseTotal(props) {
 
   return (
     <div className="expense-total">
-      <h3>Total Spent</h3>
-      <p className="total-amount">₹{total}</p>
+      <div className="total-icon">₹</div>
+      <h3>Total Expenses</h3>
+      <p className="total-amount">₹{total.toFixed(2)}</p>
+      <p className="expense-count">
+        {props.expenses.length} transaction
+        {props.expenses.length !== 1 ? "s" : ""}
+      </p>
     </div>
   );
 }

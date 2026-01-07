@@ -1,7 +1,22 @@
 .footer {
   text-align: center;
-  padding: 10px 20px;
-  background-color: #0d47a1; /* darker blue */
-  color: #bbdefb;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #0d47a1 0%, #01579b 100%);
+  color: #e3f2fd;
   font-size: 14px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: 12px;
+    padding: 12px 15px;
+  }
 }

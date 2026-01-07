@@ -9,34 +9,28 @@ function Navbar({ currentPage, onChangePage }) {
       </div>
       <div className="navbar-right">
         <button
-          className={
-            currentPage === "home"
-              ? "nav-button nav-button-active"
-              : "nav-button"
-          }
+          className={`nav-button ${
+            currentPage === "home" ? "nav-button-active" : ""
+          }`}
           onClick={() => onChangePage("home")}
         >
           Home
         </button>
         <button
-          className={
-            currentPage === "add"
-              ? "nav-button nav-button-active"
-              : "nav-button"
-          }
+          className={`nav-button ${
+            currentPage === "add" ? "nav-button-active" : ""
+          }`}
           onClick={() => onChangePage("add")}
         >
           Add Expense
         </button>
         <button
-          className={
-            currentPage === "category"
-              ? "nav-button nav-button-active"
-              : "nav-button"
-          }
+          className={`nav-button ${
+            currentPage === "category" ? "nav-button-active" : ""
+          }`}
           onClick={() => onChangePage("category")}
         >
-          Category View
+          Categories
         </button>
       </div>
     </nav>

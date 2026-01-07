@@ -35,51 +35,57 @@ function ExpenseForm(props) {
 
   return (
     <form className="expense-form" onSubmit={handleSubmit}>
-      <h2>Add New Expense</h2>
+      <div className="form-header">
+        <h2>Add New Expense</h2>
+        <p className="form-subtitle">Track your spending easily</p>
+      </div>
 
       <div className="form-group">
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name">Expense Name</label>
         <input
           type="text"
           id="name"
           value={name}
-          placeholder="e.g. biscuits"
+          placeholder="e.g., Coffee, Groceries, Movie tickets"
           required
           onChange={(e) => setName(e.target.value)}
         />
       </div>
 
       <div className="form-group">
-        <label htmlFor="category">Category:</label>
+        <label htmlFor="category">Category</label>
         <select
           id="category"
           value={category}
           required
           onChange={(e) => setCategory(e.target.value)}
         >
-          <option value="food">Food</option>
-          <option value="medical">Medical</option>
-          <option value="transport">Transport</option>
-          <option value="stationary">Stationary</option>
-          <option value="entertainment">Entertainment</option>
-          <option value="utilities">Utilities</option>
-          <option value="other">Other</option>
+          <option value="Food">Food</option>
+          <option value="Medical">Medical</option>
+          <option value="Transport">Transport</option>
+          <option value="Stationary">Stationary</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Utilities">Utilities</option>
+          <option value="Other">Other</option>
         </select>
       </div>
 
       <div className="form-group">
-        <label htmlFor="amount">Amount: </label>
+        <label htmlFor="amount">Amount (₹)</label>
         <input
           type="number"
           id="amount"
           value={amount}
-          placeholder="e.g. 53.14"
+          placeholder="e.g., 250.00"
+          step="0.01"
+          min="0"
           required
           onChange={(e) => setAmount(e.target.value)}
         />
       </div>
 
       <button type="submit" className="add-button">
+        <span className="button-icon">+</span>
         Add Expense
       </button>
     </form>

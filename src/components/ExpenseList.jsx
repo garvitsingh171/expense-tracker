@@ -4,9 +4,15 @@ import ExpenseItem from "./ExpenseItem";
 function ExpenseList(props) {
   return (
     <div className="expense-list">
-      <h2>Your Expenses</h2>
+      <h2>Recent Expenses</h2>
       {props.expenses.length === 0 ? (
-        <p className="no-expense">No expenses yet. Add one to see here.</p>
+        <div className="no-expenses">
+          <div className="empty-icon">📝</div>
+          <p>No expenses yet</p>
+          <span className="empty-hint">
+            Add your first expense to get started!
+          </span>
+        </div>
       ) : (
         <div className="expense-container">
           {props.expenses.map((expense) => (
